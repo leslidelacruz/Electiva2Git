@@ -1,0 +1,19 @@
+
+name: Alerta Hola Mundo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Enviar notificacion
+        run: |
+          curl -H "Title: Hola Mundo" \
+               -H "Content-Type: text/plain; charset=utf-8" \
+               -d "Se ha subido codigo a la rama main del repositorio." \
+               https://ntfy.sh/devops-itla
