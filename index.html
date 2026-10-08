@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hola Mundo!</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #ffe4ef, #fff5f8, #ffd0e3);
+            overflow: hidden;
+        }
+
+        .tarjeta {
+            position: relative;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 65px 55px;
+            border: 3px solid #ffb4d0;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(214, 80, 140, 0.18);
+            max-width: 90%;
+        }
+
+        .lazo {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #b83270;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            letter-spacing: -2px;
+            margin-bottom: 18px;
+        }
+
+        .saludo {
+            font-size: 1.5rem;
+            color: #d94f91;
+        }
+
+        .decoracion {
+            position: absolute;
+            color: #f06ba6;
+            font-size: 30px;
+        }
+
+        .estrella1 {
+            top: 18px;
+            left: 22px;
+        }
+
+        .estrella2 {
+            bottom: 20px;
+            right: 24px;
+        }
+
+        .corazon {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 27px;
+        }
+
+        @media (max-width: 480px) {
+            .tarjeta {
+                padding: 50px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="tarjeta">
+        <span class="decoracion estrella1">✦</span>
+        <span class="corazon">♡</span>
+
+        <div class="lazo">🎀</div>
+
+        <h1>¡Hola Mundo!</h1>
+
+        <p class="saludo">👋 ✨</p>
+
+        <span class="decoracion estrella2">✧</span>
+    </main>
+</body>
+</html>
