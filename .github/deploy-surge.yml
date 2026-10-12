@@ -1,0 +1,21 @@
+name: Deploy a Surge
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar surge
+        run: npm install --global surge
+
+      - name: Desplegar
+        run: surge ./ esthefani-practica.surge.sh --token ${{ secrets.SURGE_TOKEN }}
